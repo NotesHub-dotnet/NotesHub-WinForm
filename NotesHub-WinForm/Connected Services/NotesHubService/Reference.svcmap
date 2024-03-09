@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="7e130269-1bd1-4644-8d86-aee91975bddd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/NotesHub_Service/Service1/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="NotesHubService.wsdl" MetadataType="Wsdl" ID="258d7a40-ff36-4cba-aa86-cbe53808ddb8" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/NotesHub_Service/Service1/?wsdl" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="c4d140a1-18bc-4282-aa64-1e1ca403fdf8" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/NotesHub_Service/Service1/?xsd=xsd0" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="ae96125b-185f-4263-a906-15bf9a3b7bb1" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/NotesHub_Service/Service1/?xsd=xsd1" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="843b2afa-f521-4a76-9bf9-e2aaab56c470" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/NotesHub_Service/Service1/?xsd=xsd2" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="4af15ca2-1395-49d5-a9b5-d9ce961416ff" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/NotesHub_Service/Service1/?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

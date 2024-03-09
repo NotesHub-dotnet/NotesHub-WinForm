@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="NotesHubService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/NotesHub_Service/Service1/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/NotesHub_Service/Service1/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/NotesHub_Service/Service1/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/NotesHub_Service" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="INotesHubService_GetUserById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserById" />
+  </wsdl:message>
+  <wsdl:message name="INotesHubService_GetUserById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="INotesHubService_Signup_InputMessage">
+    <wsdl:part name="parameters" element="tns:Signup" />
+  </wsdl:message>
+  <wsdl:message name="INotesHubService_Signup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SignupResponse" />
+  </wsdl:message>
+  <wsdl:message name="INotesHubService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="INotesHubService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="INotesHubService_GetGroupById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroupById" />
+  </wsdl:message>
+  <wsdl:message name="INotesHubService_GetGroupById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroupByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="INotesHubService_GetAllGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllGroup" />
+  </wsdl:message>
+  <wsdl:message name="INotesHubService_GetAllGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="INotesHubService_CreateGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateGroup" />
+  </wsdl:message>
+  <wsdl:message name="INotesHubService_CreateGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="INotesHubService_JoinGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:JoinGroup" />
+  </wsdl:message>
+  <wsdl:message name="INotesHubService_JoinGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:JoinGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="INotesHubService_LeaveGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeaveGroup" />
+  </wsdl:message>
+  <wsdl:message name="INotesHubService_LeaveGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeaveGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="INotesHubService_GetAllGroupUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllGroupUsers" />
+  </wsdl:message>
+  <wsdl:message name="INotesHubService_GetAllGroupUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllGroupUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="INotesHubService_GetAllGroupByUserId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllGroupByUserId" />
+  </wsdl:message>
+  <wsdl:message name="INotesHubService_GetAllGroupByUserId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllGroupByUserIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="INotesHubService_GetPostById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostById" />
+  </wsdl:message>
+  <wsdl:message name="INotesHubService_GetPostById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="INotesHubService_CreatePost_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePost" />
+  </wsdl:message>
+  <wsdl:message name="INotesHubService_CreatePost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePostResponse" />
+  </wsdl:message>
+  <wsdl:message name="INotesHubService_DeletePost_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePost" />
+  </wsdl:message>
+  <wsdl:message name="INotesHubService_DeletePost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePostResponse" />
+  </wsdl:message>
+  <wsdl:message name="INotesHubService_GetAllPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPost" />
+  </wsdl:message>
+  <wsdl:message name="INotesHubService_GetAllPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="INotesHubService_GetAllPostByGroupId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPostByGroupId" />
+  </wsdl:message>
+  <wsdl:message name="INotesHubService_GetAllPostByGroupId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPostByGroupIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="INotesHubService_GetAllPostByUserId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPostByUserId" />
+  </wsdl:message>
+  <wsdl:message name="INotesHubService_GetAllPostByUserId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPostByUserIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="INotesHubService">
+    <wsdl:operation name="GetUserById">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotesHubService/GetUserById" message="tns:INotesHubService_GetUserById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INotesHubService/GetUserByIdResponse" message="tns:INotesHubService_GetUserById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Signup">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotesHubService/Signup" message="tns:INotesHubService_Signup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INotesHubService/SignupResponse" message="tns:INotesHubService_Signup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotesHubService/Login" message="tns:INotesHubService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INotesHubService/LoginResponse" message="tns:INotesHubService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupById">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotesHubService/GetGroupById" message="tns:INotesHubService_GetGroupById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INotesHubService/GetGroupByIdResponse" message="tns:INotesHubService_GetGroupById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotesHubService/GetAllGroup" message="tns:INotesHubService_GetAllGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INotesHubService/GetAllGroupResponse" message="tns:INotesHubService_GetAllGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotesHubService/CreateGroup" message="tns:INotesHubService_CreateGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INotesHubService/CreateGroupResponse" message="tns:INotesHubService_CreateGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="JoinGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotesHubService/JoinGroup" message="tns:INotesHubService_JoinGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INotesHubService/JoinGroupResponse" message="tns:INotesHubService_JoinGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeaveGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotesHubService/LeaveGroup" message="tns:INotesHubService_LeaveGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INotesHubService/LeaveGroupResponse" message="tns:INotesHubService_LeaveGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGroupUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotesHubService/GetAllGroupUsers" message="tns:INotesHubService_GetAllGroupUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INotesHubService/GetAllGroupUsersResponse" message="tns:INotesHubService_GetAllGroupUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGroupByUserId">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotesHubService/GetAllGroupByUserId" message="tns:INotesHubService_GetAllGroupByUserId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INotesHubService/GetAllGroupByUserIdResponse" message="tns:INotesHubService_GetAllGroupByUserId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPostById">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotesHubService/GetPostById" message="tns:INotesHubService_GetPostById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INotesHubService/GetPostByIdResponse" message="tns:INotesHubService_GetPostById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePost">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotesHubService/CreatePost" message="tns:INotesHubService_CreatePost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INotesHubService/CreatePostResponse" message="tns:INotesHubService_CreatePost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePost">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotesHubService/DeletePost" message="tns:INotesHubService_DeletePost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INotesHubService/DeletePostResponse" message="tns:INotesHubService_DeletePost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotesHubService/GetAllPost" message="tns:INotesHubService_GetAllPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INotesHubService/GetAllPostResponse" message="tns:INotesHubService_GetAllPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPostByGroupId">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotesHubService/GetAllPostByGroupId" message="tns:INotesHubService_GetAllPostByGroupId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INotesHubService/GetAllPostByGroupIdResponse" message="tns:INotesHubService_GetAllPostByGroupId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPostByUserId">
+      <wsdl:input wsaw:Action="http://tempuri.org/INotesHubService/GetAllPostByUserId" message="tns:INotesHubService_GetAllPostByUserId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INotesHubService/GetAllPostByUserIdResponse" message="tns:INotesHubService_GetAllPostByUserId_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_INotesHubService" type="tns:INotesHubService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserById">
+      <soap:operation soapAction="http://tempuri.org/INotesHubService/GetUserById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Signup">
+      <soap:operation soapAction="http://tempuri.org/INotesHubService/Signup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/INotesHubService/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupById">
+      <soap:operation soapAction="http://tempuri.org/INotesHubService/GetGroupById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGroup">
+      <soap:operation soapAction="http://tempuri.org/INotesHubService/GetAllGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateGroup">
+      <soap:operation soapAction="http://tempuri.org/INotesHubService/CreateGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JoinGroup">
+      <soap:operation soapAction="http://tempuri.org/INotesHubService/JoinGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeaveGroup">
+      <soap:operation soapAction="http://tempuri.org/INotesHubService/LeaveGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGroupUsers">
+      <soap:operation soapAction="http://tempuri.org/INotesHubService/GetAllGroupUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGroupByUserId">
+      <soap:operation soapAction="http://tempuri.org/INotesHubService/GetAllGroupByUserId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPostById">
+      <soap:operation soapAction="http://tempuri.org/INotesHubService/GetPostById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePost">
+      <soap:operation soapAction="http://tempuri.org/INotesHubService/CreatePost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePost">
+      <soap:operation soapAction="http://tempuri.org/INotesHubService/DeletePost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPost">
+      <soap:operation soapAction="http://tempuri.org/INotesHubService/GetAllPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPostByGroupId">
+      <soap:operation soapAction="http://tempuri.org/INotesHubService/GetAllPostByGroupId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPostByUserId">
+      <soap:operation soapAction="http://tempuri.org/INotesHubService/GetAllPostByUserId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NotesHubService">
+    <wsdl:port name="BasicHttpBinding_INotesHubService" binding="tns:BasicHttpBinding_INotesHubService">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/NotesHub_Service/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

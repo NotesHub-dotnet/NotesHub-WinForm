@@ -35,6 +35,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +48,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\NotesHubService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="CreateGrourp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateGrourp.Designer.cs">
+      <DependentUpon>CreateGrourp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupHome.Designer.cs">
+      <DependentUpon>GroupHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +85,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CreateGrourp.resx">
+      <DependentUpon>CreateGrourp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupHome.resx">
+      <DependentUpon>GroupHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,6 +109,25 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Connected Services\NotesHubService\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\NotesHubService\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\NotesHubService\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\NotesHubService\NotesHubService.wsdl" />
+    <None Include="Connected Services\NotesHubService\NotesHub_WinForm.NotesHubService.GroupModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NotesHubService\NotesHub_WinForm.NotesHubService.PostModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NotesHubService\NotesHub_WinForm.NotesHubService.UserModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -96,6 +140,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\NotesHubService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\NotesHubService\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\NotesHubService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\NotesHubService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\NotesHubService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
