@@ -53,6 +53,7 @@
             this.listView1.Size = new System.Drawing.Size(581, 424);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.ItemActivate += new System.EventHandler(this.listView1_ItemActivate);
             // 
             // button1
             // 
@@ -62,6 +63,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Create New Post";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 

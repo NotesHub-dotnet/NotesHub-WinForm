@@ -59,6 +59,12 @@
     <Compile Include="CreateGrourp.Designer.cs">
       <DependentUpon>CreateGrourp.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreatePost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreatePost.Designer.cs">
+      <DependentUpon>CreatePost.cs</DependentUpon>
+    </Compile>
     <Compile Include="GroupHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,18 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageForm.Designer.cs">
+      <DependentUpon>ManageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PostHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PostHome.Designer.cs">
+      <DependentUpon>PostHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="signup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +106,9 @@
     <EmbeddedResource Include="CreateGrourp.resx">
       <DependentUpon>CreateGrourp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CreatePost.resx">
+      <DependentUpon>CreatePost.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GroupHome.resx">
       <DependentUpon>GroupHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PostHome.resx">
+      <DependentUpon>PostHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="signup.resx">
       <DependentUpon>signup.cs</DependentUpon>

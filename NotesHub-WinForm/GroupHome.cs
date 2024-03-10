@@ -37,19 +37,23 @@ namespace NotesHub_WinForm
 
             foreach (var post in this.posts)
             {
-                ListViewItem item = new ListViewItem(new[] { post.id.ToString(), post.title, post.description, post.Documents.Length.ToString() });
+                var Documents = post.Documents;
+                ListViewItem item;
+                if (Documents != null)
+                {
+                    item = new ListViewItem(new[] { post.id.ToString(), post.title, post.description, post.Documents.Length.ToString() });
+                }
+                else
+                {
+                    item = new ListViewItem(new[] { post.id.ToString(), post.title, post.description, "0" });
+
+
+                }
                 listView1.Items.Add(item);
             }
         }
         private void ListViewGroups_ItemActivate(object sender, EventArgs e)
         {
-            if (listView1.SelectedItems.Count > 0)
-            {
-                string postId = listView1.SelectedItems[0].SubItems[0].Text;
-                //GroupHome groupForm = new GroupHome(userId: userId, postId: Int32.Parse(postId));
-                //this.Hide();
-                //groupForm.ShowDialog();
-            }
         }
 
         private void GroupHome_Load(object sender, EventArgs e)
@@ -67,6 +71,24 @@ namespace NotesHub_WinForm
             this.Hide();
             Home home = new Home(userId: userId);
             home.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            CreatePost createPost = new CreatePost(groupId, userId);
+            createPost.ShowDialog();
+        }
+
+        private void listView1_ItemActivate(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count > 0)
+            {
+                string postId = listView1.SelectedItems[0].SubItems[0].Text;
+                PostHome groupForm = new PostHome(userId: userId, postId: Int32.Parse(postId), groupId: groupId);
+                this.Hide();
+                groupForm.ShowDialog();
+            }
         }
     }
 }
